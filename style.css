@@ -1,16 +1,28 @@
+/* Base body styling */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(ellipse at center, #153170, #0b1536);
+  background: #000;
   color: white;
   text-align: center;
+  transition: background 1.5s ease-in-out;
 }
 
+/* Arc animation element */
 #tinkerbell-arc {
-  display: none; /* you can enable if needed */
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
+  z-index: 9999;
 }
 
+/* Header styling */
 header {
   padding: 60px 20px 20px;
 }
@@ -27,6 +39,7 @@ h1 {
   text-shadow: 0 0 5px #6699ff;
 }
 
+/* Resume layout */
 #resume {
   max-width: 720px;
   margin: 40px auto;
