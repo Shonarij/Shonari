@@ -1,101 +1,44 @@
+/* Basic page styling */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(ellipse at center, #10213a 0%, #0c1a33 40%, #001233 100%);
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000; /* Initial black background */
   color: white;
-  overflow-x: hidden;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.intro {
   text-align: center;
-  margin-top: 12vh;
-  position: relative;
-  z-index: 2;
+  transition: background 1.5s ease-in-out;
 }
 
-.name {
-  font-size: 3em;
-  opacity: 0;
-  animation: fadeInName 4s ease-in-out 6s forwards;
-  text-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+/* Optional title styling */
+h1 {
+  margin-top: 100px;
+  font-size: 36px;
+  text-shadow: 0 0 8px #ffffff88;
 }
 
 .tagline {
-  font-size: 1.2em;
-  color: #d0f0ff;
-  margin-top: 0.5em;
-  opacity: 0;
-  animation: fadeInName 3s ease-in-out 7s forwards;
+  font-size: 18px;
+  color: #a0cfff;
+  margin-top: -10px;
+  text-shadow: 0 0 5px #6699ff;
 }
 
-.menu {
-  margin-top: 1em;
-}
-
-.menu a {
-  margin: 0 15px;
-  color: #d0e6ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-@keyframes fadeInName {
-  to { opacity: 1; }
-}
-
-#arcCanvas {
-  position: absolute;
-  top: 0;
+/* Tinkerbell arc element */
+#tinkerbell-arc {
+  position: fixed;
+  top: 50%;
   left: 0;
-  z-index: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
+  z-index: 9999;
 }
 
-.resume-section {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 2.5em 3em;
-  margin: 5em auto;
-  width: 90%;
-  max-width: 750px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 60px rgba(0, 90, 180, 0.2), 0 0 120px rgba(0, 150, 255, 0.1);
-  color: #f5faff;
-  z-index: 3;
-  position: relative;
-  line-height: 1.65;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.4s ease;
-}
-
-.resume-section h2 {
-  font-size: 2em;
-  border-bottom: 1px solid #99bbff;
-  padding-bottom: 0.3em;
-  margin-bottom: 1em;
-}
-
-.resume-section h3 {
-  font-size: 1.4em;
-  color: #a8d0ff;
-  margin-top: 1.5em;
-}
-
-.resume-section p,
-.resume-section ul {
-  font-size: 1em;
-  margin-top: 0.5em;
-}
-
-.resume-section ul {
-  padding-left: 1.2em;
-}
-
-.resume-section ul li {
-  margin-bottom: 0.5em;
-}
+  // Change the background to VHS-inspired blue after arc finishes
+  setTimeout(() => {
+    document.body.style.background = "radial-gradient(ellipse at center, #b6ccff, #1f2755)";
+    document.body.style.transition = "background 1.5s ease-in-out";
+  }, 3000);
+};
