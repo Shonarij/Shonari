@@ -1,49 +1,77 @@
-#resume {
-  max-width: 750px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 0 30px #1a3a80cc;
-  color: #f0f0f0;
-  backdrop-filter: blur(6px);
-}
-
-#resume h2 {
-  font-size: 32px;
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(ellipse at center, #153170, #0b1536);
   color: white;
-  text-shadow: 0 0 8px #ffffffaa;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
-.resume-section {
-  margin-bottom: 35px;
+#tinkerbell-arc {
+  display: none; /* you can enable if needed */
+}
+
+header {
+  padding: 60px 20px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 8px #ffffffaa;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #9ccaff;
+  text-shadow: 0 0 5px #6699ff;
+}
+
+#resume {
+  max-width: 720px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px #0b2546aa;
   text-align: left;
 }
 
-.resume-section h3 {
-  font-size: 20px;
-  color: #d9e7ff;
-  border-bottom: 1px solid #ffffff22;
-  padding-bottom: 6px;
+#resume h2 {
+  text-align: center;
+  font-size: 28px;
   margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 0 0 6px #ffffff99;
 }
 
-.resume-section p {
+.resume-block {
+  margin-bottom: 30px;
+}
+
+.resume-block h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #a5caff;
+  border-bottom: 1px solid #ffffff22;
+  padding-bottom: 4px;
+}
+
+.resume-block p {
   font-size: 15px;
-  color: #c9d7f0;
-  margin: 10px 0;
+  margin: 10px 0 5px;
+  color: #dfe8ff;
 }
 
-.resume-section ul {
+.resume-block ul {
+  list-style-type: disc;
   padding-left: 20px;
-  margin: 10px 0;
+  color: #e4eeff;
   line-height: 1.6;
-  color: #e6edff;
+  margin-top: 5px;
 }
 
-.resume-section a {
-  color: #ffffffcc;
+a {
+  color: #cce6ff;
   text-decoration: underline;
 }
