@@ -1,57 +1,43 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: black;
-  animation: blueFade 10s ease forwards;
-  color: white;
-  overflow-x: hidden;
-}
+const canvas = document.getElementById("arcCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-@keyframes blueFade {
-  0% { background: black; }
-  25% { background: #001233; }
-  50% { background: #0047ab; }
-  75% { background: #87bfff; }
-  100% { background: #24477b; } /* Settles on a darker, readable blue */
-}
+let angle = Math.PI; // starts from right to left
+let radius = canvas.height / 2.5;
+let centerX = canvas.width;
+let centerY = canvas.height / 1.3;
+const fairyDust = [];
 
-.intro {
-  text-align: center;
-  margin-top: 15vh;
-}
+function drawArc() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-.name {
-  font-size: 3em;
-  opacity: 0;
-  animation: fadeInName 4s ease-in-out 6s forwards;
-  text-shadow: 0 0 12px white;
-}
+  // Arc trail
+  ctx.beginPath();
+  ctx.strokeStyle = "white";
+  ctx.lineWidth = 2;
+  ctx.arc(centerX, centerY, radius, Math.PI, angle, true);
+  ctx.stroke();
 
-@keyframes fadeInName {
-  to {
-    opacity: 1;
+  // Fairy dust
+  fairyDust.forEach((p, i) => {
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
+    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+    ctx.fill();
+    p.y += 1;
+    p.alpha -= 0.01;
+    if (p.alpha <= 0) fairyDust.splice(i, 1);
+  });
+
+  const dustX = centerX + radius * Math.cos(angle);
+  const dustY = centerY + radius * Math.sin(angle);
+  fairyDust.push({ x: dustX, y: dustY, alpha: 1 });
+
+  if (angle > 0) {
+    angle -= 0.01; // Slower arc
+    requestAnimationFrame(drawArc);
   }
 }
 
-#arcCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.resume-section {
-  max-width: 800px;
-  margin: 5vh auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  color: white;
-  font-size: 1rem;
-  line-height: 1.6;
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.1);
-}
+window.onload = drawArc;
