@@ -1,145 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shonari Johnson</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000; /* Initial black background before arc animation */
-      color: white;
-      text-align: center;
-      transition: background 1.5s ease-in-out;
-      padding: 20px;
-    }
+<section id="resume">
+  <h2>Résumé</h2>
+  <hr/>
 
-    #tinkerbell-arc {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: white;
-      box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
-      z-index: 9999;
-    }
-
-    h1 {
-      font-size: 36px;
-      text-shadow: 0 0 8px #ffffff88;
-      margin-top: 100px;
-    }
-
-    .tagline {
-      font-size: 18px;
-      color: #a0cfff;
-      margin-top: -10px;
-      text-shadow: 0 0 5px #6699ff;
-    }
-
-    #resume {
-      max-width: 700px;
-      margin: 60px auto;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #ffffff22;
-    }
-
-    #resume h2 {
-      font-size: 28px;
-      color: #fff;
-      text-align: center;
-      text-shadow: 0 0 5px #ffffff99;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 10px 0 30px 0;
-    }
-
-    .job h4 {
-      margin-bottom: 5px;
-      color: #ffffffdd;
-    }
-
-    .job p, .job ul {
-      font-size: 15px;
-      line-height: 1.5;
-      color: #dddddd;
-    }
-
-    .job ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Arc animates on load -->
-  <script>
-    window.onload = () => {
-      const arc = document.createElement("div");
-      arc.id = "tinkerbell-arc";
-      document.body.appendChild(arc);
-
-      arc.animate(
-        [
-          { transform: "translateX(100vw) translateY(0) scale(0.5)", opacity: 0 },
-          { transform: "translateX(50vw) translateY(-50vh) scale(1.1)", opacity: 1 },
-          { transform: "translateX(0vw) translateY(0) scale(0.5)", opacity: 0 }
-        ],
-        {
-          duration: 3500,
-          easing: "ease-in-out",
-          fill: "forwards"
-        }
-      );
-
-      setTimeout(() => {
-        document.body.style.background = "radial-gradient(ellipse at center, #b6ccff, #1f2755)";
-      }, 3000);
-    };
-  </script>
-
-  <!-- Header -->
-  <h1>Shonari Johnson</h1>
-  <p class="tagline">the grass is greener here</p>
-
-  <!-- Résumé -->
-  <section id="resume">
-    <h2>Résumé</h2>
-    <hr/>
-
+  <div class="resume-section">
     <h3>Experience</h3>
 
-    <div class="job">
-      <h4>Creative Producer / Event Strategist</h4>
-      <p><em>Adidas All-Star Weekend, T-Mobile, MetroPCS</em></p>
-      <p>
-        Led end-to-end production logistics, social engineering strategies, bilingual activations, and large-scale wellness experiences for brand events and campaigns.
-      </p>
-    </div>
+    <p><strong>Creative Producer / Event Strategist</strong> – <em>Adidas All-Star Weekend, T-Mobile, MetroPCS</em></p>
+    <ul>
+      <li>Led behind-the-scenes production, social engineering, bilingual activation, and festival wellness experiences</li>
+    </ul>
 
-    <div class="job">
-      <h4>Production Assistant / Assistant Producer</h4>
-      <p><em>Inner Dimension TV, Cartoon Network</em></p>
-      <p>
-        Supported animation and wellness content production workflows, including scheduling, remote coordination, and streamlining digital studio pipelines.
-      </p>
-    </div>
+    <p><strong>Production Assistant / Assistant Producer</strong> – <em>Inner Dimension TV, Cartoon Network</em></p>
+    <ul>
+      <li>Supported studio logistics and international yoga web series</li>
+      <li>Organized wellness-based digital content and streamlined animation pipelines</li>
+    </ul>
+  </div>
 
-    <div class="job">
-      <h4>Creative & Wellness Work</h4>
-      <ul>
-        <li>Produced for Coachella Wellness, InfinitelyFluid, Yogi Homie’s, and Now Here LA</li>
-        <li>Led event scaling, grassroots activations, and large-scale programming</li>
-      </ul>
-    </div>
-  </section>
-</body>
-</html>
+  <div class="resume-section">
+    <h3>Creative & Wellness Work</h3>
+    <ul>
+      <li>Produced for Coachella Wellness, InfinitelyFluid, Now Here LA, Yogi Homie’s</li>
+      <li>Volunteered for community yoga collectives across Los Angeles and Sacramento</li>
+      <li>Featured as practitioner and organizer in international yoga projects</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h3>Skills</h3>
+    <ul>
+      <li>Creative Direction & Event Production</li>
+      <li>Digital Wellness Curation & Brand Strategy</li>
+      <li>Multimedia Coordination / Bilingual Campaigns</li>
+      <li>Adobe Creative Suite, Canva, HTML/CSS (basic)</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h3>Contact</h3>
+    <p>shonarij@gmail.com | Based in California<br>Portfolio: <a href="https://shonarij.github.io">shonarij.github.io</a></p>
+  </div>
+</section>
