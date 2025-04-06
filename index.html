@@ -4,64 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shonari Johnson</title>
-  <style>
-    /* Base Reset */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    /* Arc style */
-    #tinkerbell-arc {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: white;
-      box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
-      z-index: 9999;
-      pointer-events: none;
-    }
-
-    /* Glow up screen */
-    body.glow-up {
-      background: radial-gradient(ellipse at center, #b6ccff, #1f2755);
-      transition: background 2s ease-in-out;
-    }
-
-    header {
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 1.5s ease, transform 1.5s ease;
-      padding-top: 100px;
-    }
-
-    body.reveal header {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    h1 {
-      font-size: 42px;
-      text-shadow: 0 0 15px #ffffff;
-    }
-
-    .tagline {
-      font-size: 18px;
-      color: #a0cfff;
-      margin-top: -10px;
-      text-shadow: 0 0 5px #6699ff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-
   <div id="tinkerbell-arc"></div>
 
   <header>
@@ -69,34 +15,48 @@
     <p class="tagline">the grass is greener here</p>
   </header>
 
-  <script>
-    // Wait for the page to load
-    window.onload = () => {
-      const arc = document.getElementById("tinkerbell-arc");
+  <section id="resume">
+    <h2>Resume</h2>
+    <hr/>
 
-      arc.animate(
-        [
-          { transform: "translateX(100vw) translateY(0) scale(0.6)", opacity: 0 },
-          { transform: "translateX(50vw) translateY(-40vh) scale(1.2)", opacity: 1 },
-          { transform: "translateX(0vw) translateY(0) scale(0.5)", opacity: 0 }
-        ],
-        {
-          duration: 4000,
-          easing: "ease-in-out",
-          fill: "forwards"
-        }
-      );
+    <div class="resume-block">
+      <h3>Experience</h3>
+      <p><strong>Creative Producer / Event Strategist</strong> – <em>Adidas All-Star Weekend, T-Mobile, MetroPCS</em></p>
+      <ul>
+        <li>Led behind-the-scenes production, social engineering, bilingual activation, and festival wellness experiences</li>
+      </ul>
 
-      // Fade in glow background + title
-      setTimeout(() => {
-        document.body.classList.add("glow-up");
-      }, 3000);
+      <p><strong>Production Assistant / Assistant Producer</strong> – <em>Inner Dimension TV, Cartoon Network</em></p>
+      <ul>
+        <li>Supported studio logistics and international yoga web series</li>
+        <li>Organized wellness-based digital content and streamlined animation pipelines</li>
+      </ul>
+    </div>
 
-      setTimeout(() => {
-        document.body.classList.add("reveal");
-      }, 4000);
-    };
-  </script>
+    <div class="resume-block">
+      <h3>Creative & Wellness Work</h3>
+      <ul>
+        <li>Produced for Coachella Wellness, InfinitelyFluid, Now Here LA, Yogi Homie’s</li>
+        <li>Volunteered for community yoga collectives across Los Angeles and Sacramento</li>
+        <li>Featured as practitioner and organizer in international yoga projects</li>
+      </ul>
+    </div>
 
+    <div class="resume-block">
+      <h3>Skills</h3>
+      <ul>
+        <li>Creative Direction & Event Production</li>
+        <li>Digital Wellness Curation & Brand Strategy</li>
+        <li>Multimedia Coordination / Bilingual Campaigns</li>
+        <li>Adobe Creative Suite, Canva, HTML/CSS (basic)</li>
+      </ul>
+    </div>
+
+    <div class="resume-block">
+      <h3>Contact</h3>
+      <p>shonarij@gmail.com | Based in California</p>
+      <p>Portfolio: <a href="https://shonarij.github.io">shonarij.github.io</a></p>
+    </div>
+  </section>
 </body>
 </html>
