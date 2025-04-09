@@ -2,13 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #003087; /* Rich Disney royal blue */
+  background: linear-gradient(to bottom, #001848, #003087);
   color: white;
   text-align: center;
   overflow-x: hidden;
 }
 
-/* White arc sparkle */
+/* Glowing arc */
 #tinkerbell-arc {
   position: fixed;
   top: 50%;
@@ -18,70 +18,69 @@ body {
   border-radius: 50%;
   background: white;
   box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
-  z-index: 1000;
+  z-index: 9999;
   pointer-events: none;
 }
 
-/* Header section */
+/* Header animation */
 header {
-  padding: 100px 20px 20px;
+  padding: 80px 20px 30px;
+  animation: fadeIn 3s ease forwards;
+  opacity: 0;
 }
 
-h1 {
+.glow {
   font-size: 36px;
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 12px white;
 }
 
 .tagline {
   font-size: 18px;
   color: #a0cfff;
-  text-shadow: 0 0 4px #6699ff;
   margin-top: -10px;
+  text-shadow: 0 0 4px #6699ff;
 }
 
-/* Resume section layout */
+/* Resume */
 #resume {
-  max-width: 700px;
-  margin: 40px auto;
-  background: rgba(255, 255, 255, 0.07); /* More visible container */
+  max-width: 720px;
+  margin: 30px auto;
   padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 0 30px #0b2546aa;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 0 40px #0b254688;
   text-align: left;
+  animation: fadeIn 4s ease forwards;
+  opacity: 0;
 }
 
-#resume h2 {
+h2 {
+  font-size: 26px;
   text-align: center;
-  font-size: 28px;
-  text-shadow: 0 0 5px #ffffff88;
-  margin-bottom: 20px;
+  text-shadow: 0 0 5px #ffffff99;
 }
 
-.resume-block {
-  margin-bottom: 30px;
-}
-
-.resume-block h3 {
-  font-size: 20px;
+h3 {
   color: #a5caff;
+  margin-top: 30px;
   border-bottom: 1px solid #ffffff22;
   padding-bottom: 6px;
-  margin-bottom: 10px;
 }
 
-.resume-block p {
-  font-size: 15px;
-  color: #dfe8ff;
-  margin: 10px 0 5px;
-}
-
-.resume-block ul {
+ul {
   padding-left: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #e6edff;
 }
 
 a {
   color: #cce6ff;
   text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
