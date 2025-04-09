@@ -8,7 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Glowing arc */
 #tinkerbell-arc {
   position: fixed;
   top: 50%;
@@ -22,7 +21,7 @@ body {
   pointer-events: none;
 }
 
-/* Header animation */
+/* Header */
 header {
   padding: 80px 20px 30px;
   animation: fadeIn 3s ease forwards;
@@ -41,7 +40,7 @@ header {
   text-shadow: 0 0 4px #6699ff;
 }
 
-/* Resume */
+/* Resume Box */
 #resume {
   max-width: 720px;
   margin: 30px auto;
@@ -78,7 +77,6 @@ a {
   text-decoration: underline;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   to {
     opacity: 1;
