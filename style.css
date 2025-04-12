@@ -1,49 +1,91 @@
-/* Fonts + Reset */
+/* General Body Styling */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
-  background: white;
-  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #012b66 0%, #00173d 100%);
+  color: white;
   text-align: center;
+  transition: background 1.5s ease-in-out;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Header */
-.home-header {
+/* Glowing Title */
+h1 {
   margin-top: 60px;
-}
-
-.tagline {
-  font-family: monospace;
-  font-size: 16px;
-  margin: 10px 0 40px;
-}
-
-/* Bubble Buttons */
-.bubble {
-  display: inline-block;
-  padding: 10px 25px;
-  margin: 10px;
-  font-size: 18px;
-  border: 2px solid black;
-  border-radius: 40px;
-  box-shadow: 6px 6px 0px #000;
-  background-color: white;
-  transition: all 0.2s ease;
-}
-
-.bubble:hover {
-  transform: translateY(-3px);
-  box-shadow: 4px 4px 0px #000;
-}
-
-.bubble.large {
   font-size: 36px;
-  font-weight: bold;
-  padding: 20px 40px;
+  text-shadow: 0 0 8px white;
 }
+
+/* Tagline */
+.tagline {
+  font-size: 18px;
+  color: #a6cfff;
+  margin-top: -10px;
+  text-shadow: 0 0 5px #6699ff;
+}
+
+/* Navigation Links */
+nav {
+  margin-top: 20px;
+}
+nav a {
+  margin: 0 12px;
+  color: #a6cfff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Arc Element (Disney) */
+#tinkerbell-arc {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
+  z-index: 9999;
+}
+
+/* Resume Section */
+.resume {
+  background-color: rgba(0, 20, 60, 0.7);
+  border-radius: 12px;
+  padding: 40px 20px;
+  margin: 80px auto;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 12px #003366;
+}
+
+.resume h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px white;
+}
+
+.resume h3 {
+  margin-top: 30px;
+  color: #cce6ff;
+  font-size: 22px;
+  border-bottom: 1px solid #6699ff;
+  padding-bottom: 5px;
+}
+
+.resume h4 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.resume em {
+  font-style: italic;
+  display: block;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  color: #
