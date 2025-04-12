@@ -1,84 +1,44 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(to bottom, #001848, #003087);
-  color: white;
+  font-family: 'Georgia', serif;
+  background: #ffffff;
+  color: #000;
   text-align: center;
-  overflow-x: hidden;
 }
 
-#tinkerbell-arc {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 20px white, 0 0 40px #cce6ff;
-  z-index: 9999;
-  pointer-events: none;
+.nav-bar {
+  padding: 30px 0;
 }
 
-/* Header */
-header {
-  padding: 80px 20px 30px;
-  animation: fadeIn 3s ease forwards;
-  opacity: 0;
+.nav-btn {
+  font-family: 'Courier New', monospace;
+  background: #fff;
+  border: 2px solid #000;
+  padding: 10px 25px;
+  margin: 10px;
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.2s ease;
 }
 
-.glow {
-  font-size: 36px;
-  text-shadow: 0 0 12px white;
+.nav-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #000;
+}
+
+.home {
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
 }
 
 .tagline {
-  font-size: 18px;
-  color: #a0cfff;
-  margin-top: -10px;
-  text-shadow: 0 0 4px #6699ff;
-}
-
-/* Resume Box */
-#resume {
-  max-width: 720px;
-  margin: 30px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  box-shadow: 0 0 40px #0b254688;
-  text-align: left;
-  animation: fadeIn 4s ease forwards;
-  opacity: 0;
-}
-
-h2 {
-  font-size: 26px;
-  text-align: center;
-  text-shadow: 0 0 5px #ffffff99;
-}
-
-h3 {
-  color: #a5caff;
-  margin-top: 30px;
-  border-bottom: 1px solid #ffffff22;
-  padding-bottom: 6px;
-}
-
-ul {
-  padding-left: 20px;
-  line-height: 1.7;
-  color: #e6edff;
-}
-
-a {
-  color: #cce6ff;
-  text-decoration: underline;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
 }
